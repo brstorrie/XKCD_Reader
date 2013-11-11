@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  
+  "name": "XKCD Reader",
+  "version": "1.0",
+  "icons": { "128": "xkcd-icon.png" },
+  "permissions": [
+    "tabs", "http://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["jQuery.js","replacer.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "jQuery.js",
+	"replacer.js",
+	"jquery.min.map"
+	]
+}
